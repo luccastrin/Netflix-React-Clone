@@ -44,3 +44,58 @@ h2 {
     margin-bottom: 20px;
     line-height: 1.1;
 }
+
+.sign-up {
+    width: 55%;
+    text-align: center;
+
+    p {
+        font-size: 18px;
+    }
+
+    .inputs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        input {
+            height: 50px;
+            margin-bottom: 15px;
+            border: none;
+
+            &::placeholder {
+                color: #acacac;
+                font-weight: 500;
+            }
+
+            &[placeholder] {
+                padding-left: 15px;
+            }
+
+            &[value] {
+                font-size: 22px;
+                text-transform: uppercase;
+                color: #fff;
+                background-color: #e50914;
+            }
+        }
+
+        .arrow {
+            width: 2.5%;
+            position: absolute;
+            right: 15px;
+            top: 25px;
+            transform: translateY(-50%);
+        }
+
+        input[type="text"] {
+            width: 60%;
+        }
+
+        input[type="submit"] {
+            width: 40%;
+            cursor: pointer;
+        }
+    }
+}

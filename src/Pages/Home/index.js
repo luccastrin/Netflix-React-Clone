@@ -1,4 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { MdAdd } from 'react-icons/md';
+import { FaGlobe } from 'react-icons/fa';
+
 import './style.scss';
 
 import logoImg from '../../Assets/logo.png';
@@ -8,9 +12,9 @@ import mobile from '../../Assets/stranger-things.jpg';
 import strangerCover from '../../Assets/strangers-page.png';
 import animatedGif from '../../Assets/download-icon.gif';
 import imacImage from '../../Assets/device-pile.png';
-import plusLogo from '../../Assets/plus.svg';
 
 function index() {
+
     return (
         <>
             <header id="header">
@@ -21,7 +25,7 @@ function index() {
                     <div className="flex-position">
                         <div className="header-logo">
                             <img src={logoImg} alt="Logo Netflix"/> 
-                            <a href="login.html">Entrar</a>
+                            <Link to="/login">Entrar</Link>
                         </div>
 
                         <div className="header-content">
@@ -110,46 +114,125 @@ function index() {
                         <ul>
                             <li>
                                 <h2>O que é a Netflix?</h2>
-                                <img src={plusLogo} alt="Plus"/>
+                                <MdAdd size="38"/>
                             </li>
                             <li>
                                 <h2>Quanto custa a Netflix?</h2>
-                                <img src={plusLogo} alt="Plus"/>
+                                <MdAdd size="38"/>
                             </li>
                             <li>
                                 <h2>Onde posso assistir?</h2>
-                                <img src={plusLogo} alt="Plus"/>
+                                <MdAdd size="38"/>
                             </li>
                             <li>
                                 <h2>Como faço para cancelar?</h2>
-                                <img src={plusLogo} alt="Plus"/>
+                                <MdAdd size="38"/>
                             </li>
                             <li>
                                 <h2>O que eu posso assistir na Netflix?</h2>
-                                <img src={plusLogo} alt="Plus"/>
+                                <MdAdd size="38"/>
                             </li>
                         </ul>
+
+                        <div className="sign-up">
+                            <div className="inputs">
+                                <input type="text" placeholder="Email"/>
+                                <input type="submit" value="Assine a netflix"/>
+                                <img className="arrow" src={arrowRight} alt="Arrow"/> 
+                            </div>
+
+                            <p>Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <section id="footer">
+                <div className="container">
 
+                    <div className="footer-content">
+                        
+                        <h3>Dúvidas? Ligue <span>0800-761-4631</span></h3>
+
+                        <div className="lists-netflix">
+                            <ul>
+                                <li>
+                                    <a href="/">Perguntas frequentes</a>
+                                </li>
+                                <li>
+                                    <a href="/">Relações com investidores</a>
+                                </li>
+                                <li>
+                                    <a href="/">Formas de assistir</a>
+                                </li>
+                                <li>
+                                    <a href="/">Informações corporativas</a>
+                                </li>
+                                <li>
+                                    <a href="/">Originais Netflix</a>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <a href="/">Centro de ajuda</a>
+                                </li>
+                                <li>
+                                    <a href="/">Carreiras</a>
+                                </li>
+                                <li>
+                                    <a href="/">Termos de uso</a>
+                                </li>
+                                <li>
+                                    <a href="/">Entre em contato</a>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <a href="/">Conta</a>
+                                </li>
+                                <li>
+                                    <a href="/">Resgatar cartão pré-pago</a>
+                                </li>
+                                <li>
+                                    <a href="/">Privacidade</a>
+                                </li>
+                                <li>
+                                    <a href="/">Teste de velocidade</a>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <a href="/">Imprensa</a>
+                                </li>
+                                <li>
+                                    <a href="/">Comprar cartão pré-pago</a>
+                                </li>
+                                <li>
+                                    <a href="/">Preferência de cookies</a>
+                                </li>
+                                <li>
+                                    <a href="/">Avisos legais</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="select-option">
+                            <FaGlobe className="globe" color="#757575"/>
+                            <select>
+                                <option>Português</option>
+                                <option>Inglês</option>
+                            </select>
+
+                            <p>Netflix Brasil</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </section>
         </>
     )
 }
