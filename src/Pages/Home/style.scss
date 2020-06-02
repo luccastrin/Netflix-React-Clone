@@ -1,12 +1,10 @@
-#header {
-    float: left;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 160px;
+#bg-movies {
     background-image: url('../../Assets/bg-netflix.jpg');
     background-size: cover;
-    position: relative;
     border-bottom: 5px solid #222;
+    position: relative;
+    padding-top: 250px;
+    padding-bottom: 150px;
 
     .dark-overlay {
         position: absolute;
@@ -18,35 +16,10 @@
         z-index: 1;
     }
 
-    .flex-position {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-
-        .header-logo {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 180px;
-    
-            img {
-                width: 10%;
-            }
-    
-            a {
-                background-color: #e50914;
-                padding: 10px 15px;
-                border-radius: 3px;
-            }
-        }
-    
-        .header-content {
-            float: left;
-            width: 48%;
-            text-align: center;
-        }
+    .header-content {
+        float: left;
+        width: 48%;
+        text-align: center;
     }
 }
 
@@ -74,9 +47,18 @@
 
         .tv-image {
             width: 50%;
+            position: relative;
 
             img {
                 width: 80%;
+            }
+
+            .video-loop {
+                width: 59%;
+                position: absolute;
+                top: 79px;
+                left: 66px;
+                z-index: -1;
             }
         }
     }
@@ -187,9 +169,18 @@
 
         .tv-image {
             width: 50%;
+            position: relative;
 
             img {
                 width: 80%;
+            }
+
+            .video-loop-2 {
+                width: 48%;
+                position: absolute;
+                top: 43px;
+                left: 100px;
+                z-index: -1;
             }
         }
     }

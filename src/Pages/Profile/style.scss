@@ -1,0 +1,71 @@
+body {
+    background-color: #131313;
+}
+
+#choose-profile {
+    padding-top: 200px;
+
+    h2 {
+        font-size: 46px;
+    }
+
+    .flex-position {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            float: left;
+            width: 64%;
+            text-align: center;
+            margin-bottom: 80px;
+
+            li {
+                float: left;
+                width: 16.8%;
+                margin-right: 4%;
+                text-align: center;
+
+                &:last-child {
+                        margin-right: 0;
+                    }
+
+                .link-movies {
+    
+                    .avatar {
+                        float: left;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        
+                        img {
+                            width: 100%;
+                            border: 3px solid #2c2c2c;
+    
+                            &:hover {
+                                border: 3px solid #fff;
+                            }
+                        }
+                    }
+    
+                    p {
+                        text-align: center;
+                        color: #787878;
+                    }
+                }
+            }
+        }
+
+        .manage-profile {
+            display: inline-block;
+            color: #787878;
+            text-transform: uppercase;
+            border: 1px solid #787878;
+            padding: 10px 40px;
+
+            &:hover {
+                color: #fff;
+                border: 1px solid #fff;
+            }
+        }
+    }
+}

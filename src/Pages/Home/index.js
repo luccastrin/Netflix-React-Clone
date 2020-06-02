@@ -1,51 +1,42 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { MdAdd } from 'react-icons/md';
 import { FaGlobe } from 'react-icons/fa';
 
+import Header from '../../components/Header';
+import Input from '../../components/Input';
+
 import './style.scss';
 
-import logoImg from '../../Assets/logo.png';
-import arrowRight from '../../Assets/arrow-right.svg';
 import tvImage from '../../Assets/tv.png';
 import mobile from '../../Assets/stranger-things.jpg';
 import strangerCover from '../../Assets/strangers-page.png';
 import animatedGif from '../../Assets/download-icon.gif';
 import imacImage from '../../Assets/device-pile.png';
 
+import video1 from '../../Assets/video.m4v';
+import video2 from '../../Assets/stranger.m4v';
+
 function index() {
 
     return (
         <>
-            <header id="header">
-                <div className="container">
+            <Header />
 
+            <section id="bg-movies">
+                <div className="container">
                     <div className="dark-overlay"></div>
 
                     <div className="flex-position">
-                        <div className="header-logo">
-                            <img src={logoImg} alt="Logo Netflix"/> 
-                            <Link to="/login">Entrar</Link>
-                        </div>
-
                         <div className="header-content">
                             <h1>Filmes, séries e muito mais. Sem limites.</h1>
                             <h2>Assista onde quiser. Cancele quando quiser.</h2>
                         </div>
 
-                        <div className="sign-up">
-                            <div className="inputs">
-                                <input type="text" placeholder="Email"/>
-                                <input type="submit" value="Assine a netflix"/>
-                                <img className="arrow" src={arrowRight} alt="Arrow"/> 
-                            </div>
-
-                            <p>Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
-                        </div>
+                        <Input />
                     </div>
 
                 </div>
-            </header>
+            </section>
 
             <section id="enjoy-tv">
                 <div className="container">
@@ -57,7 +48,10 @@ function index() {
                         </div>
 
                         <div className="tv-image">
-                            <img src={tvImage} alt="TV"/>
+                            <img src={tvImage} alt="TV" />
+                            <video class="video-loop" autoplay="true" loop muted>
+                                <source src={video1} />
+                            </video>
                         </div>
                     </div>
 
@@ -69,14 +63,14 @@ function index() {
 
                     <div className="tv-content">
                         <div className="tv-image">
-                            <img src={mobile} alt="Mobile"/>
+                            <img src={mobile} alt="Mobile" />
                             <div className="card-animation">
-                                <img className="cover" src={strangerCover} alt="Cover"/>
+                                <img className="cover" src={strangerCover} alt="Cover" />
                                 <div className="card-content">
                                     <p>Stranger Things</p>
                                     <span>Download em andamento...</span>
                                 </div>
-                                <img className="gif" src={animatedGif} alt="Gif"/>
+                                <img className="gif" src={animatedGif} alt="Gif" />
                             </div>
                         </div>
 
@@ -99,7 +93,10 @@ function index() {
                         </div>
 
                         <div className="tv-image">
-                            <img src={imacImage} alt="iMac"/>
+                            <img src={imacImage} alt="iMac" />
+                            <video class="video-loop-2" autoplay="true" loop muted>
+                                <source src={video2} />
+                            </video>
                         </div>
                     </div>
 
@@ -114,35 +111,27 @@ function index() {
                         <ul>
                             <li>
                                 <h2>O que é a Netflix?</h2>
-                                <MdAdd size="38"/>
+                                <MdAdd size="38" />
                             </li>
                             <li>
                                 <h2>Quanto custa a Netflix?</h2>
-                                <MdAdd size="38"/>
+                                <MdAdd size="38" />
                             </li>
                             <li>
                                 <h2>Onde posso assistir?</h2>
-                                <MdAdd size="38"/>
+                                <MdAdd size="38" />
                             </li>
                             <li>
                                 <h2>Como faço para cancelar?</h2>
-                                <MdAdd size="38"/>
+                                <MdAdd size="38" />
                             </li>
                             <li>
                                 <h2>O que eu posso assistir na Netflix?</h2>
-                                <MdAdd size="38"/>
+                                <MdAdd size="38" />
                             </li>
                         </ul>
 
-                        <div className="sign-up">
-                            <div className="inputs">
-                                <input type="text" placeholder="Email"/>
-                                <input type="submit" value="Assine a netflix"/>
-                                <img className="arrow" src={arrowRight} alt="Arrow"/> 
-                            </div>
-
-                            <p>Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
-                        </div>
+                        <Input />
                     </div>
                 </div>
             </section>
@@ -151,7 +140,7 @@ function index() {
                 <div className="container">
 
                     <div className="footer-content">
-                        
+
                         <h3>Dúvidas? Ligue <span>0800-761-4631</span></h3>
 
                         <div className="lists-netflix">
@@ -220,7 +209,7 @@ function index() {
                         </div>
 
                         <div className="select-option">
-                            <FaGlobe className="globe" color="#757575"/>
+                            <FaGlobe className="globe" color="#757575" />
                             <select>
                                 <option>Português</option>
                                 <option>Inglês</option>
@@ -229,8 +218,8 @@ function index() {
                             <p>Netflix Brasil</p>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
             </section>
         </>

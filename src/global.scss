@@ -45,6 +45,47 @@ h2 {
     line-height: 1.1;
 }
 
+#header {
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 160px;
+    position: absolute;
+    
+    .flex-position {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+
+        .header-logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 180px;
+    
+            img {
+                width: 10%;
+            }
+    
+            a {
+                background-color: #e50914;
+                padding: 10px 15px;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+.flex-position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
 .sign-up {
     width: 55%;
     text-align: center;
